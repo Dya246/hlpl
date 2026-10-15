@@ -11,7 +11,7 @@ using namespace std;
 
 class NPC
 {
-protected:
+public:
     string name{ "npc" };
     unsigned int damage{ 2 };
     unsigned int health{ 5 };
@@ -182,7 +182,7 @@ public:
     Evil(string name) : Evil() { this->name = name; }
     Evil(string name, unsigned int damage) : Evil(name) { this->damage = damage; }
     Evil(string name, unsigned int damage, unsigned int health) : Evil(name, damage) { this->health = health; }
-    Evil(string name, unsigned int damage, unsigned int health, unsignedintarmor) : Evil(name, damage, health) { this->armor = armor; }
+    Evil(string name, unsigned int damage, unsigned int health, unsigned int armor) : Evil(name, damage, health) { this->armor = armor; }
 
     ~Evil()
     {
@@ -249,7 +249,7 @@ void TakeDamage(NPC* npc, unsigned int damage)
 
 int main()
 {
-    setlocale(LC_ALL, "Rus");
+    setlocale(LC_ALL, "RUS");
 
     Player player;
 
